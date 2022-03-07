@@ -40,7 +40,7 @@ else:
 
 print("3. Write a python program to store different data type values into a list.")
 
-### inputS from user ###
+### input from user ###
 SID=int(input("Enter your SID : "))
 name=input("Enter your name : ")
 gender=input("Enter your Gender-(M,F,U) :  ")
