@@ -2,42 +2,45 @@
 
 print("\nQuestion 1")
 
-#input from user
-string_name=str(input("Enter the string:"))
-list1=string_name.split()
-list_l=[]
-for e in list1:
-    lower_e=e.lower()
-    list_l.append(lower_e)
-set1=set(list_l)
-dic={}
-for el in set1:
-    count=list_l.count(el)
-    dic.update({el:count})
-dic2={}       
-set2={1,2}
-set2.clear()  
-list2=[]     
-if len(list1)==1:
-    
-    for elements in string_name:
-        list2.append(elements)
-   
-    for el in list2:
-        set2.add(el.lower())
-    
-    string_l=string_name.lower()
-    for elem in set2:
+n=input("Enter the string - ")
+# converting the string to lower case
+a= n.lower()
+## splitting the string into words
+new_list=a.split()
+# declaring two empty lists
+letter_list=[]
+word_list=[]
+# Conditioning to distinguish if the entered string is a single word or a sentence... 
+if len(new_list)==1:
+    ## if the string is a word..
+    for i in a:
+         # adding each letter in the letter_list
+        letter_list.append(i) 
+    # introducing an empty dictionary    
+    di1={}
+    # here letters take place of key and number of their occurences take place of corresponding values in di1
+    for j in letter_list:
+        if j in di1:
+            di1[j]=di1[j]+1
+        else:
+            di1[j]=1
+    print(di1)
         
-        dic2.update({elem:string_l.count(elem)})
-    
-    print("\nDictionary containing 'Letter':'Letter Count' is shown below:")
-    print(dic2)
-
 else:
-    print("\nDictionary containing {'Word':'Word Count'} is shown below:")
-    print(dic)      
-
+    # if the string is not a word..
+    for w in new_list:
+        ### adding each word in the letter_list
+        word_list.append(w)
+    # introducing an empty dictionary  
+    di4={}
+    # here words take place of key and number of their occurences take place of corresponding values in di4
+    for s in word_list:
+        if s in di4:
+            di4[s]=di4[s]+1
+        else:
+            di4[s]=1
+            
+    print(di4)
 
 
 #Q2 Write a python script to print next date of input date. It must meet following conditions(use if-elif)
@@ -145,7 +148,8 @@ print(list2)
 
 
 
-#Q4 Write a program to prompt the user for a grade between 4 and 10. If the grade is out of range print error message. If the grade is between 4 and 10 Print the grade and the performance using the following:
+#Q4 Write a program to prompt the user for a grade between 4 and 10. If the grade is out of range print error message. If the grade is between 4 and 10 Print the grade and the performance using the following:
+
 
 print("\nQuestion 4")
 
@@ -248,113 +252,53 @@ print(f"Name of student with SID {enter_sid} is {output_name}.")
 
 print("\nQuestion 7")
 
-#input from user
-n=int(input("Enter number of elements N in fibonacci series:\n[N must be positive Integer]: N="))
-#printing error message when N<=0
-if n<=0 :
-    print("\nError\nNumber of elements in fibonacci series must be integer and greater than zero.")
-#code for fibonacci series
-else:
-    #code for fibonacci series for first 2 elements
-    if n == 1:
-        print("\nThe fibonacci series with 1 element is shown below\n[1]")
-        print("\nAverage of given fibonacci series is", 1)
-
-    elif n == 2:
-        print("\nThe fibonacci series with 2 element is shown below\n[1,1]")
-        print("\nAverage of given fibonacci series is", 1)
-    #General code for fibonacci for next N-2 elements
+a = 0
+b = 1
+sum = 0
+while True:                                                                                                         
+    num = int(input("Enter the no. of terms of the Fibonacci sequence: "))
+    if num < 0:
+        print("Number of terms must be non-negative\nPlease enter again\n")
+        continue
+    if num == 0:
+        print("As the number of terms = 0, the average of all terms = 0")
+        break
     else:
-        # List of fibonacci elements with 1,1 as initial elements
-        list1 = [1, 1]
-        #Building logic to get fibonacci series
-        a = 1
-        b = 1
-        # For loop
-        for i in range(n - 2):
-            s = a + b
-            list1.append(s)
+        print("The Fibonacci sequence is as follows:")
+        print(a,end=" ")
+        for i in range(1,num):
+            sum += b
+            print(b, end=" ")
+            c = a + b
             a = b
-            b = s
-        # printing the final fibonacci series
-        print(f"\nThe fibonacci series with {n} elements is shown below:")
-        print(list1)
-        # Finding average of fibonacci series
-        sum = 0    #intial sum=0
-        # finding sum of all elements in list1
-        for num in list1:
-            sum = sum + num
-        average = (sum / n)
-        # Till two decimal place
-        two_decimal = "{:.2f}".format(average)
-        # printing average
-        print(f"\nAverage of given fibonacci series is {two_decimal}")
+            b = c
+        print("\nThe average of the terms of Fibonacci sequence upto %d terms is %0.2f" % (num,sum/num))
+        break
 
 
 
 #Q8 Given the sets below, write python statement to:
 
         
-print("\nQuestion 7")
-
-#Given Sets
-set1= {1, 2, 3, 4, 5}
-set2= {2, 4, 6, 8}
-set3= {1, 5, 9, 13, 17}
-#printing the given sets
-print(f"Set1= {set1}\nSet2= {set2}\nSet3= {set3}")
-#a
-print("\nQ.8(a)")
-print("\nA new Set of all 'elements that are in Set1 and Set2 but not both' is:")
-set_sym_dif=set1.symmetric_difference(set2)
-print(set_sym_dif)
-#b
-#set1 Union set2
-print("\nQ.8(b)")
-print("\nA new set of all elements that are 'in only one of the three sets Set1,Set2 and Set3' is:")
-set_u1=set1.union(set2)
-
-#set1 Union set2 Union set3
-set_uf=set_u1.union(set3)
-
-#set1 intersection set2
-set_i1=set1.intersection(set2)
-
-#set1 intersection set2 intersection set3
-set_if=set_i1.intersection(set3)
-
-#set1 intersection set2
-set_12=set1.intersection(set2)
-
-#set2 intersection set3
-set_23=set2.intersection(set3)
-
-#set3 intersection set1
-set_13=set1.intersection(set3)
-
-#final required set
-set_f1=set_uf-set_12-set_23-set_13
-print(set_f1)
-#c
-print("\nQ.8(c)")
-set_c1=set_12.union(set_23)
-set_c2=set_c1.union(set_13)
-set_final=set_c2-set_if
-print("\nA new set of elements that are 'exactly in two of the sets Set1, Set2 and Set3' is:")
-print(set_final)
-#d
-#forming a set containing values from 1 to 10
-print("\nQ.8(d)")
-set_d={1,2}
-set_d.clear()
+print("\nQuestion 8")
+set1 = {1,2,3,4,5}
+set2 = {2,4,6,8}
+set3 = {1,5,9,13,17}
+print("a. Set of all elements that are in Set1 and Set2 but not both:",end=" ")
+set4 = set1^set2
+print(set4)
+print("b. Set of all elements that are in only one of the three sets Set1, Set2 and Set3:",end=" ")
+set5 = set1^set2^set3
+print(set5)
+print("c. Set of elements that are in exactly two of the sets Set1, Set2 and Set3:",end=" ")
+set6 = (set1|set2|set3) - (set1^set2^set3) - (set1&set2&set3)
+print(set6)
+print("d. Set of all integers in the range 1 to 10 that are not in Set1:",end=" ")
+set7 = set()
 for i in range(1,11):
-    set_d.add(i)
-set_new=set_d-set1
-#printing final set
-print("\nA new set of all Integers in the 'range 1 to 10' that are 'not in Set1' is:")
-print(set_new)
-#e
-print("\nQ.8(e)")
-set_e=set_d-set_uf
-print("\nA new set of all Integers in the range 1 to 10 that are not in Set1,Set2 and Set3.")
-print(set_e)
+    if i not in set1:
+        set7.add(i)
+print(set7)
+print("e. Set of all integers in the range 1 to 10 that are not in Set1, Set2 and Set3:",end=" ")
+set8 = set(range(1,11)) - (set1|set2|set3)
+print(set8)
