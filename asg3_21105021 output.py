@@ -4,10 +4,8 @@ Type "help", "copyright", "credits" or "license()" for more information.
 ================== RESTART: C:/Users/SUGAM ARORA/Desktop/1.py ==================
 
 Question 1
-Enter the string: hello my name is sugam arora and i am from ECE
-
-Dictionary containing {'Word':'Word Count'} is shown below:
-{'arora': 1, 'from': 1, 'and': 1, 'ece': 1, 'my': 1, 'i': 1, 'sugam': 1, 'is': 1, 'name': 1, 'hello': 1, 'am': 1}
+Enter the string - hello all my name is Sugam Arora and my course is ECE
+{'hello': 1, 'all': 1, 'my': 2, 'name': 1, 'is': 2, 'sugam': 1, 'arora': 1, 'and': 1, 'course': 1, 'ece': 1}
 
 ================== RESTART: C:/Users/SUGAM ARORA/Desktop/1.py ==================
 
@@ -71,42 +69,16 @@ Name of student with SID 21105021 is Sugam Arora.
 ================== RESTART: C:/Users/SUGAM ARORA/Desktop/1.py ==================
 
 Question 7
-Enter number of elements N in fibonacci series:
-[N must be positive Integer]: N=10
-
-The fibonacci series with 10 elements is shown below:
-[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
-
-Average of given fibonacci series is 14.30
+Enter the no. of terms of the Fibonacci sequence: 8
+The Fibonacci sequence is as follows:
+0 1 1 2 3 5 8 13 
+The average of the terms of Fibonacci sequence upto 8 terms is 4.12
 
 ================== RESTART: C:/Users/SUGAM ARORA/Desktop/1.py ==================
 
-Question 7
-Set1= {1, 2, 3, 4, 5}
-Set2= {8, 2, 4, 6}
-Set3= {1, 17, 5, 9, 13}
-
-Q.8(a)
-
-A new Set of all 'elements that are in Set1 and Set2 but not both' is:
-{1, 3, 5, 6, 8}
-
-Q.8(b)
-
-A new set of all elements that are 'in only one of the three sets Set1,Set2 and Set3' is:
-{3, 6, 8, 9, 13, 17}
-
-Q.8(c)
-
-A new set of elements that are 'exactly in two of the sets Set1, Set2 and Set3' is:
-{1, 2, 4, 5}
-
-Q.8(d)
-
-A new set of all Integers in the 'range 1 to 10' that are 'not in Set1' is:
-{6, 7, 8, 9, 10}
-
-Q.8(e)
-
-A new set of all Integers in the range 1 to 10 that are not in Set1,Set2 and Set3.
-{10, 7}
+Question 8
+a. Set of all elements that are in Set1 and Set2 but not both: {1, 3, 5, 6, 8}
+b. Set of all elements that are in only one of the three sets Set1, Set2 and Set3: {17, 3, 6, 8, 9, 13}
+c. Set of elements that are in exactly two of the sets Set1, Set2 and Set3: {1, 2, 4, 5}
+d. Set of all integers in the range 1 to 10 that are not in Set1: {6, 7, 8, 9, 10}
+e. Set of all integers in the range 1 to 10 that are not in Set1, Set2 and Set3: {10, 7}
