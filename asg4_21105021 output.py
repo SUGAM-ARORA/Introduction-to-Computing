@@ -6,26 +6,22 @@ ASSIGNMENT 4
 
  Q1Write a recursive python function to solve the problem of tower of Hanoi with three disks.
 
-Enter number of disk in tower of Hanoi:4
+Number of discs: 3
 
-The Disks are numbered starting from top of the tower.
-Steps to move all disks from Source Tower to Destination Tower is given below:
+A is the initial rod
+B is the extra rod
+C is the final rod
 
-Move disk 1 from Source Tower to Auxiliary
-Move disk 2 from Source Tower to Destination
-Move disk 1 from Auxiliary to Destination
-Move disk 3 from Source Tower to Auxiliary
-Move disk 1 from Destination to Source Tower
-Move disk 2 from Destination to Auxiliary
-Move disk 1 from Source Tower to Auxiliary
-Move disk 4 from Source Tower to Destination
-Move disk 1 from Auxiliary to Destination
-Move disk 2 from Auxiliary to Source Tower
-Move disk 1 from Destination to Source Tower
-Move disk 3 from Auxiliary to Destination
-Move disk 1 from Source Tower to Auxiliary
-Move disk 2 from Source Tower to Destination
-Move disk 1 from Auxiliary to Destination
+Steps:
+Move disk 1 from rod A to rod C
+Move disk 2 from rod A to rod B
+Move disk 1 from rod C to rod B
+Move disk 3 from rod A to rod C
+Move disk 1 from rod B to rod A
+Move disk 2 from rod B to rod C
+Move disk 1 from rod A to rod C
+
+Number of steps will be: 7
 
 ================== RESTART: C:/Users/SUGAM ARORA/Desktop/1.py ==================
 
@@ -44,33 +40,15 @@ Enter number of rows:8
 
  Q3 Input two integer values from user, calculate and print the quotient and reminder obtained from the two values
 
-Enter an Integer:1024
-Enter another Integer:15
-
-The quotient when 1024 is divided by 15 is 68.
-The remainder when 1024 is divided by 15 is 4.
-
-Que3.a
-Function is callable
-1024 is Not-callable
-15 is Not-callable
-
-Que3.b
-All result values are 'non-zero'
-
-Que3.c
-Values greater than 4 is 68,5,6
-
-Que3.d
-Above result in set form is shown below:
-{68, 5, 6}
-
-Que3.e
-The above set has been converted to immutable.
-
-Que3.f
-Max value from set is 68
-Hash value of 68 is 68
+Enter the Dividend = 10
+Enter the Divisor = 4
+The Quotient is- 2 and The Remainder is - 2 
+a). Is the function - divmod callable?     - Ans. True
+b). All the values are non zeros or not?   -Ans. True
+c). The database -  [5, 6]
+d). The required database is -  {5, 6}
+e). The required immutable set is -  frozenset({5, 6})
+f). The maximum value in the set is -  6 and its hash value is -  6
 
 ====================================================================== RESTART: C:/Users/SUGAM ARORA/Desktop/1.py ======================================================================
 
@@ -83,16 +61,9 @@ Destructor Called
 
  Q5 Write a program to store details of three employees: name and salary using class.
 
-Employee Name is Mehak and Salary is 40000 
-Employee Name is Ashok and Salary is 50000 
-Employee Name is Viren and Salary is 60000 
+a). The updated salary of the employee Mehak is 70000
+b). Employee Viren record deleted
 
-Que.5a
-Mehak salary Updated to 70000
-Employee Name is Mehak and Salary is 70000 
-
-Que.5b
-Employee Viren's data has been removed.
 
 ====================================================================== RESTART: C:/Users/SUGAM ARORA/Desktop/1.py ======================================================================
 
