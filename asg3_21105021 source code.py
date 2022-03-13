@@ -66,8 +66,8 @@ else:
     condition1=True
 
 #condition 2
-month_31 = [1, 3, 5, 7, 9, 11]  #List containing month with 31 days
-month_30 = [4, 6, 8, 10, 12]    #List containing month with 30 days
+month_31 = [1, 3, 5, 7, 8, 10,12]  #List containing month with 31 days
+month_30 = [4, 6, 9, 11]    #List containing month with 30 days
 #for day entered 31 does not present in that month
 c1a= day==31 and (month in month_30)
 #for day entered greater than 29 in month february i.e 2
@@ -90,8 +90,8 @@ elif condition1==False:
 
 #correct data
 if condition1==True and condition2==True :
-    month_31 = [1, 3, 5, 7, 9, 11]  #List containing month with 31 days
-    month_30 = [4, 6, 8, 10, 12]    #List containing month with 30 days
+    month_31 = [1, 3, 5, 7, 8, 10,12]  #List containing month with 31 days
+    month_30 = [4, 6, 9,11]    #List containing month with 30 days
     #For month with 31 days
     if (month in month_31) == True:
         if day == 31:
